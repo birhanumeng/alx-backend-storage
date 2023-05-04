@@ -1,1 +1,1 @@
-## ALX-Holberton backend storage, MySQL
+## ALX-Holberton backend storage.
