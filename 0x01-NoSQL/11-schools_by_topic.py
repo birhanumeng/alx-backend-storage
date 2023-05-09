@@ -5,4 +5,6 @@ def schools_by_topic(mongo_collection, topic):
     """ Based on the given topic in the argument list all
         all the document.
     """
-    mongo_collection.find({"topics": topics})
+    documents = mongo_collection.find({"topics": topics})
+    [list_docs for doc in documents]
+    return list_docs
