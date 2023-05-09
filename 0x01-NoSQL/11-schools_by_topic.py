@@ -6,5 +6,5 @@ def schools_by_topic(mongo_collection, topic):
         all the document.
     """
     documents = mongo_collection.find({"topics": topics})
-    [list_docs for doc in documents]
-    return list_docs
+    docs = [doc for doc in documents]
+    return docs
