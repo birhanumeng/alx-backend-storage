@@ -2,7 +2,7 @@
 """ This module for implementing redis basics. """
 
 import redis
-from typing import Union, Callable
+from typing import Union, Callable, Optional
 from uuid import uuid4
 
 
