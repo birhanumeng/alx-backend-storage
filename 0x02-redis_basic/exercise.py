@@ -10,6 +10,14 @@ def count_calls(method: Callable) -> Callable:
     """ Count how many times methods of the Cache class are called """
     key = method.__qualname__
 
+    @wraps(method)
+    def wrapper(self, *args, **kwargs):
+        """ Decorator """
+        self._redis.incr(key)
+        return method(self, *args, **kwargs)
+
+    return wrapper
+
 class Cache:
     """ Redis cache storage. """
     def __init__(self):
